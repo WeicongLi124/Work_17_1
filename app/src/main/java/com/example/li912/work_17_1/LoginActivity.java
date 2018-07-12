@@ -37,7 +37,6 @@ public class LoginActivity extends AppCompatActivity {
         initView();
         initListener();
         steepStatusBar();
-        String str;
     }
 
     /**
