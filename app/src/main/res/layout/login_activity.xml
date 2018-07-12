@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout_rl"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/timg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/login_title"
+        android:layout_above="@id/login_edt_ll"
+        android:layout_marginBottom="100dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/login_edt_ll"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <EditText
+                android:id="@+id/login_user_edt"
+                android:inputType="number"
+                android:hint="@string/userName"
+                style="@style/login_edt_style" />
+            <ImageView
+                android:src="@drawable/user"
+                style="@style/login_img_style" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <EditText
+                android:id="@+id/login_psw_edt"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                style="@style/login_edt_style"  />
+            <ImageView
+                android:src="@drawable/password"
+                style="@style/login_img_style"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/login_signUp_tv"
+        android:text="@string/loginSignUp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/login_edt_ll"
+        style="@style/text_btn_style" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:text="@string/loginBtn"
+        android:textColor="@android:color/white"
+        android:background="@drawable/login_btn_selector"
+        android:layout_below="@id/login_signUp_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/login_view"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/login_btn"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:background="@android:color/white"
+            android:layout_width="120dp"
+            android:layout_height="1dp"/>
+        <TextView
+            android:text="OR"
+            android:textColor="@android:color/white"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@android:color/white"
+            android:layout_width="120dp"
+            android:layout_height="1dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/login_view"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@drawable/facebook"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@drawable/twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

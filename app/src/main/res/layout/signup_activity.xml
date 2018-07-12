@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout_rl"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+
+    android:background="@drawable/timg"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/login_title"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@id/signup_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/signup_edt"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/sign_name_rl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <EditText
+                android:id="@+id/sign_name_edt"
+                android:inputType="text"
+                android:hint="@string/name"
+                style="@style/login_edt_style"  />
+            <ImageView
+                android:src="@drawable/user"
+                style="@style/login_img_style"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sign_mobile_rl"
+            android:layout_below="@id/sign_name_rl"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <EditText
+                android:id="@+id/sign_mobile_edt"
+                android:inputType="number"
+                android:hint="@string/mobile"
+                android:maxLength="11"
+                style="@style/login_edt_style"  />
+            <ImageView
+                android:src="@drawable/mobile"
+                style="@style/login_img_style"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sign_user_rl"
+            android:layout_below="@id/sign_mobile_rl"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <EditText
+                android:id="@+id/sign_user_edt"
+                android:inputType="number"
+                android:hint="@string/userName"
+                style="@style/login_edt_style"  />
+            <ImageView
+                android:src="@drawable/user"
+                style="@style/login_img_style"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sign_psw_rl"
+            android:layout_below="@+id/sign_user_rl"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <EditText
+                android:id="@+id/sign_psw_edt"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                style="@style/login_edt_style"  />
+            <ImageView
+                android:src="@drawable/password"
+                style="@style/login_img_style"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/signup_login_tv"
+        android:text="@string/signup_login"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/signup_btn"
+        style="@style/text_btn_style"/>
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:text="@string/signupBtn"
+        android:textColor="@android:color/white"
+        android:background="@drawable/login_btn_selector"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
