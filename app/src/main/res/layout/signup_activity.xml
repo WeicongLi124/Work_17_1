@@ -32,10 +32,10 @@
                 android:id="@+id/sign_name_edt"
                 android:inputType="text"
                 android:hint="@string/name"
-                style="@style/login_edt_style"  />
+                style="@style/LoginEditTextStyle"  />
             <ImageView
                 android:src="@drawable/user"
-                style="@style/login_img_style"/>
+                style="@style/LoginImageViewStyle"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -49,10 +49,10 @@
                 android:inputType="number"
                 android:hint="@string/mobile"
                 android:maxLength="11"
-                style="@style/login_edt_style"  />
+                style="@style/LoginEditTextStyle"  />
             <ImageView
                 android:src="@drawable/mobile"
-                style="@style/login_img_style"/>
+                style="@style/LoginImageViewStyle"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -65,10 +65,10 @@
                 android:id="@+id/sign_user_edt"
                 android:inputType="number"
                 android:hint="@string/userName"
-                style="@style/login_edt_style"  />
+                style="@style/LoginEditTextStyle"  />
             <ImageView
                 android:src="@drawable/user"
-                style="@style/login_img_style"/>
+                style="@style/LoginImageViewStyle"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -81,10 +81,10 @@
                 android:id="@+id/sign_psw_edt"
                 android:inputType="textPassword"
                 android:hint="@string/password"
-                style="@style/login_edt_style"  />
+                style="@style/LoginEditTextStyle"  />
             <ImageView
                 android:src="@drawable/password"
-                style="@style/login_img_style"/>
+                style="@style/LoginImageViewStyle"/>
         </RelativeLayout>
     </RelativeLayout>
 
@@ -97,7 +97,7 @@
         <TextView
             android:id="@+id/signup_login_tv"
             android:text="@string/signup_login"
-            style="@style/text_btn_style"/>
+            style="@style/TextButtonStyle"/>
     </LinearLayout>
 
 

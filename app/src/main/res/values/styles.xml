@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="login_edt_style">
+    <style name="LoginEditTextStyle">
         <item name="android:background">@drawable/login_edt_bg</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -18,7 +18,7 @@
         <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="login_img_style">
+    <style name="LoginImageViewStyle">
         <item name="android:layout_centerVertical">true</item>
         <item name="android:layout_marginStart">15dp</item>
         <item name="android:layout_width">25dp</item>
@@ -26,7 +26,7 @@
         <item name="android:layout_marginTop">30dp</item>
     </style>
 
-    <style name="text_btn_style">
+    <style name="TextButtonStyle">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:textSize">16sp</item>

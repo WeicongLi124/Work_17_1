@@ -30,10 +30,10 @@
                 android:id="@+id/login_user_edt"
                 android:inputType="number"
                 android:hint="@string/userName"
-                style="@style/login_edt_style" />
+                style="@style/LoginEditTextStyle" />
             <ImageView
                 android:src="@drawable/user"
-                style="@style/login_img_style" />
+                style="@style/LoginImageViewStyle" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -44,10 +44,10 @@
                 android:id="@+id/login_psw_edt"
                 android:inputType="textPassword"
                 android:hint="@string/password"
-                style="@style/login_edt_style"  />
+                style="@style/LoginEditTextStyle"  />
             <ImageView
                 android:src="@drawable/password"
-                style="@style/login_img_style"/>
+                style="@style/LoginImageViewStyle"/>
         </RelativeLayout>
 
     </LinearLayout>
@@ -61,7 +61,7 @@
         <TextView
             android:id="@+id/login_signUp_tv"
             android:text="@string/login_signUp_btn"
-            style="@style/text_btn_style" />
+            style="@style/TextButtonStyle" />
     </LinearLayout>
 
 
