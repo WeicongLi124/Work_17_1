@@ -1,4 +1,4 @@
-package com.example.li912.work_17_1;
+package com.example.li912.work_17_1.view;
 
 import android.graphics.Color;
 import android.os.Build;
@@ -12,6 +12,11 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.li912.work_17_1.adapter.MyListAdapter;
+import com.example.li912.work_17_1.R;
+import com.example.li912.work_17_1.model.TitleBean;
+import com.example.li912.work_17_1.model.UserBean;
 
 import java.util.ArrayList;
 import java.util.List;

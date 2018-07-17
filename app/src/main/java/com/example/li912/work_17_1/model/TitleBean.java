@@ -1,4 +1,4 @@
-package com.example.li912.work_17_1;
+package com.example.li912.work_17_1.model;
 
 public class TitleBean {
     private String title;

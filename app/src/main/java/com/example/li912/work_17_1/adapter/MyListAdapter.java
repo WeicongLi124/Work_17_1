@@ -1,4 +1,4 @@
-package com.example.li912.work_17_1;
+package com.example.li912.work_17_1.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.li912.work_17_1.R;
+import com.example.li912.work_17_1.model.TitleBean;
 
 import java.util.List;
 

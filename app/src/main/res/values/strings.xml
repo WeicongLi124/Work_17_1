@@ -5,9 +5,11 @@
     <string name="password">Password</string>
     <string name="name">Name</string>
     <string name="mobile">Mobile</string>
-    <string name="loginTitle">Tentcoo</string>
-    <string name="loginSignUp">New User? SIGNUP</string>
-    <string name="loginBtn">LET\'S GO</string>
+    <string name="login_title">Tentcoo</string>
+    <string name="login_subTitle">tools</string>
+    <string name="login_signUp_btn">New User? SIGNUP</string>
+    <string name="login_btn">LET\'S GO</string>
     <string name="signup_login">Already Account? LOGIN</string>
-    <string name="signupBtn">SIGNUP</string>
+    <string name="signup_btn">SIGNUP</string>
+    <string name="login_or">OR</string>
 </resources>

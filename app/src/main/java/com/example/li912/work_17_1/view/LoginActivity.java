@@ -1,4 +1,4 @@
-package com.example.li912.work_17_1;
+package com.example.li912.work_17_1.view;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -17,26 +17,29 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SignUpActivity extends AppCompatActivity {
+import com.example.li912.work_17_1.R;
+import com.example.li912.work_17_1.model.UserBean;
+
+/**
+ * @author: Frank
+ * @time: 2018/4/13 09:04
+ * @e-mail: 912220261@qq.com
+ * Function:
+ */
+public class LoginActivity extends AppCompatActivity {
     private RelativeLayout mainLayoutRl;
-    private TextView loginTv;
-    private EditText nameEdt;
-    private EditText mobileEdt;
+    private TextView signTv;
     private EditText userEdt;
     private EditText pswEdt;
-    private Button signBtn;
-    private String name;
-    private String mobile;
-    private String userName;
-    private String password;
+    private Button loginBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.signup_activity);
-        steepStatusBar();
+        setContentView(R.layout.login_activity);
         initView();
         initListener();
+        steepStatusBar();
     }
 
     /**
@@ -44,12 +47,10 @@ public class SignUpActivity extends AppCompatActivity {
      */
     private void initView(){
         mainLayoutRl = findViewById(R.id.mainLayout_rl);
-        loginTv = findViewById(R.id.signup_login_tv);
-        nameEdt = findViewById(R.id.sign_name_edt);
-        mobileEdt = findViewById(R.id.sign_mobile_edt);
-        userEdt = findViewById(R.id.sign_user_edt);
-        pswEdt = findViewById(R.id.sign_psw_edt);
-        signBtn = findViewById(R.id.signup_btn);
+        signTv = findViewById(R.id.login_signUp_tv);
+        userEdt = findViewById(R.id.login_user_edt);
+        pswEdt = findViewById(R.id.login_psw_edt);
+        loginBtn = findViewById(R.id.login_btn);
     }
 
     /**
@@ -64,42 +65,27 @@ public class SignUpActivity extends AppCompatActivity {
                 return false;
             }
         });
-        loginTv.setOnClickListener(new View.OnClickListener() {
+        signTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
+                Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
                 startActivity(intent);
             }
         });
-        signBtn.setOnClickListener(new View.OnClickListener() {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!checkText()){
-                    Toast.makeText(SignUpActivity.this,"something is not true", Toast.LENGTH_LONG).show();
+                if (!userEdt.getText().toString().equals("")&&!pswEdt.getText().toString().equals("")
+                        &&userEdt.getText().toString().equals(UserBean.user.getUserName())
+                        &&pswEdt.getText().toString().equals(UserBean.user.getPassword())){
+                    Toast.makeText(LoginActivity.this,"LOGIN", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(LoginActivity.this,ListActivity.class);
+                    startActivity(intent);
                 }else {
-                    UserBean.user.setName(name);
-                    UserBean.user.setMobile(mobile);
-                    UserBean.user.setUserName(userName);
-                    UserBean.user.setPassword(password);
-                    Toast.makeText(SignUpActivity.this,"SIGN UP", Toast.LENGTH_LONG).show();
-                    finish();
+                    Toast.makeText(LoginActivity.this,"something is not true", Toast.LENGTH_LONG).show();
                 }
             }
         });
-    }
-
-    /**
-     * 检测EditText是否为空
-     * @return
-     */
-    private boolean checkText(){
-        name = nameEdt.getText().toString();
-        mobile = mobileEdt.getText().toString();
-        userName = userEdt.getText().toString();
-        password = pswEdt.getText().toString();
-        if (name.equals("")||mobile.equals("")||userName.equals("")||password.equals(""))
-            return false;
-        else return true;
     }
 
     /**

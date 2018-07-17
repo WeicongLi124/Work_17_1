@@ -20,7 +20,7 @@
         <ImageButton
             android:id="@+id/tools_reduce"
             android:src="@drawable/reduce"
-            android:background="@drawable/img_btn_selector"
+            android:background="@drawable/list_img_btn_selector"
             android:layout_marginEnd="10dp"
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
@@ -30,7 +30,7 @@
         <ImageButton
             android:id="@+id/tools_plus"
             android:src="@drawable/plus"
-            android:background="@drawable/img_btn_selector"
+            android:background="@drawable/list_img_btn_selector"
             android:layout_marginEnd="10dp"
             android:layout_centerVertical="true"
             android:layout_toStartOf="@id/tools_reduce"
