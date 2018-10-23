@@ -34,7 +34,7 @@ public class Tools {
     /**
      * 收起软键盘
      */
-    public static void hideSoftInput(Activity activity){
+    public static void hideSoftInput(Activity activity) {
         // 收起键盘
         View view = activity.getWindow().peekDecorView();// 用于判断虚拟软键盘是否是显示的
         if (view != null) {

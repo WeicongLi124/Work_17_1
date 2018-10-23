@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="#1d1d1d"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp">
+    android:layout_height="50dp"
+    android:background="#1d1d1d">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/tools_title"
-            android:text="标题"
-            android:textSize="20sp"
-            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="标题"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
 
         <ImageButton
             android:id="@+id/tools_reduce"
-            android:src="@drawable/reduce"
-            android:background="@drawable/list_img_btn_selector"
-            android:layout_marginEnd="10dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"
             android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/list_img_btn_selector"
+            android:src="@drawable/reduce" />
 
         <ImageButton
             android:id="@+id/tools_plus"
-            android:src="@drawable/plus"
-            android:background="@drawable/list_img_btn_selector"
-            android:layout_marginEnd="10dp"
-            android:layout_centerVertical="true"
-            android:layout_toStartOf="@id/tools_reduce"
             android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/tools_reduce"
+            android:background="@drawable/list_img_btn_selector"
+            android:src="@drawable/plus" />
     </RelativeLayout>
 
 </RelativeLayout>

@@ -41,7 +41,7 @@ public class SignUpActivity extends AppCompatActivity {
     /**
      * 初始化控件
      */
-    private void initView(){
+    private void initView() {
         mainLayoutRl = findViewById(R.id.mainLayout_rl);
         loginTv = findViewById(R.id.signup_login_tv);
         nameEdt = findViewById(R.id.sign_name_edt);
@@ -54,7 +54,7 @@ public class SignUpActivity extends AppCompatActivity {
     /**
      * 定义监听
      */
-    private void initListener(){
+    private void initListener() {
         mainLayoutRl.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -66,21 +66,21 @@ public class SignUpActivity extends AppCompatActivity {
         loginTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
+                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
         signBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!checkText()){
-                    Toast.makeText(SignUpActivity.this,"something is not true", Toast.LENGTH_LONG).show();
-                }else {
+                if (!checkText()) {
+                    Toast.makeText(SignUpActivity.this, "something is not true", Toast.LENGTH_LONG).show();
+                } else {
                     UserBean.user.setName(name);
                     UserBean.user.setMobile(mobile);
                     UserBean.user.setUserName(userName);
                     UserBean.user.setPassword(password);
-                    Toast.makeText(SignUpActivity.this,"SIGN UP", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignUpActivity.this, "SIGN UP", Toast.LENGTH_LONG).show();
                     finish();
                 }
             }
@@ -89,14 +89,15 @@ public class SignUpActivity extends AppCompatActivity {
 
     /**
      * 检测EditText是否为空
+     *
      * @return
      */
-    private boolean checkText(){
+    private boolean checkText() {
         name = nameEdt.getText().toString();
         mobile = mobileEdt.getText().toString();
         userName = userEdt.getText().toString();
         password = pswEdt.getText().toString();
-        if (name.equals("")||mobile.equals("")||userName.equals("")||password.equals(""))
+        if (name.equals("") || mobile.equals("") || userName.equals("") || password.equals(""))
             return false;
         else return true;
     }

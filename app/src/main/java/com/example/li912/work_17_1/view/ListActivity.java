@@ -18,7 +18,7 @@ import com.example.li912.work_17_1.model.UserBean;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListActivity extends AppCompatActivity implements View.OnClickListener{
+public class ListActivity extends AppCompatActivity implements View.OnClickListener {
     private ListView listView;
     private List<TitleBean> titleBeans;
     private MyListAdapter adapter;
@@ -39,26 +39,26 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
     /**
      * 初始化控件
      */
-    private void initView(){
+    private void initView() {
         listView = findViewById(R.id.list_list);
         titleTv = findViewById(R.id.tools_title);
         plusBtn = findViewById(R.id.tools_plus);
         reduceBtn = findViewById(R.id.tools_reduce);
         titleTv.setText(UserBean.user.getName());
-        adapter = new MyListAdapter(this,titleBeans);
+        adapter = new MyListAdapter(this, titleBeans);
         listView.setAdapter(adapter);
     }
 
     /**
      * 定义监听
      */
-    private void initListener(){
+    private void initListener() {
         plusBtn.setOnClickListener(this);
         reduceBtn.setOnClickListener(this);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(ListActivity.this,"the number "+position+" item", Toast.LENGTH_LONG).show();
+                Toast.makeText(ListActivity.this, "the number " + position + " item", Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -66,27 +66,27 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
     /**
      * 添加数据
      */
-    private void setData(){
+    private void setData() {
         titleBeans = new ArrayList<>();
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
             num = i;
-            titleBeans.add(new TitleBean("number "+i+" title","the number "+i+" subtitle"));
+            titleBeans.add(new TitleBean("number " + i + " title", "the number " + i + " subtitle"));
         }
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.tools_plus:
                 num++;
-                titleBeans.add(new TitleBean("number "+num+" title","the number "+num+" subtitle"));
+                titleBeans.add(new TitleBean("number " + num + " title", "the number " + num + " subtitle"));
                 adapter.notifyDataSetChanged();
-                listView.setSelection(adapter.getCount()-1);
+                listView.setSelection(adapter.getCount() - 1);
                 break;
             case R.id.tools_reduce:
                 if (titleBeans.isEmpty())
-                    Toast.makeText(ListActivity.this,"data is null", Toast.LENGTH_LONG).show();
-                else{
+                    Toast.makeText(ListActivity.this, "data is null", Toast.LENGTH_LONG).show();
+                else {
                     titleBeans.remove(0);
                     adapter.notifyDataSetChanged();
                     listView.setSelection(0);

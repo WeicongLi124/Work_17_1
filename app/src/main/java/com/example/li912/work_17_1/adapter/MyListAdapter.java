@@ -17,7 +17,7 @@ public class MyListAdapter extends BaseAdapter {
     private Context context;
     private List<TitleBean> titleBeans;
 
-    public MyListAdapter(Context context, List<TitleBean> titleBeans){
+    public MyListAdapter(Context context, List<TitleBean> titleBeans) {
         this.context = context;
         this.titleBeans = titleBeans;
     }
@@ -40,21 +40,21 @@ public class MyListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
-        if (convertView == null){
+        if (convertView == null) {
             viewHolder = new ViewHolder();
-            convertView = LayoutInflater.from(context).inflate(R.layout.list_item,parent,false);
+            convertView = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false);
             viewHolder.avatarImg = convertView.findViewById(R.id.item_avatar);
             viewHolder.titleTv = convertView.findViewById(R.id.item_title);
             viewHolder.subTitleTv = convertView.findViewById(R.id.item_sub_title);
             convertView.setTag(viewHolder);
-        }else viewHolder = (ViewHolder) convertView.getTag();
+        } else viewHolder = (ViewHolder) convertView.getTag();
         viewHolder.avatarImg.setImageResource(R.drawable.avatar);
         viewHolder.titleTv.setText(titleBeans.get(position).getTitle());
         viewHolder.subTitleTv.setText(titleBeans.get(position).getSubTitle());
         return convertView;
     }
 
-    class ViewHolder{
+    class ViewHolder {
         ImageView avatarImg;
         TextView titleTv;
         TextView subTitleTv;

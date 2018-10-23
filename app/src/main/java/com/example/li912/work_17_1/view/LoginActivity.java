@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     /**
      * 初始化控件
      */
-    private void initView(){
+    private void initView() {
         mainLayoutRl = findViewById(R.id.mainLayout_rl);
         signTv = findViewById(R.id.login_signUp_tv);
         userEdt = findViewById(R.id.login_user_edt);
@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
     /**
      * 定义监听
      */
-    private void initListener(){
+    private void initListener() {
         mainLayoutRl.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -64,21 +64,21 @@ public class LoginActivity extends AppCompatActivity {
         signTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
+                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
                 startActivity(intent);
             }
         });
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!userEdt.getText().toString().equals("")&&!pswEdt.getText().toString().equals("")
-                        &&userEdt.getText().toString().equals(UserBean.user.getUserName())
-                        &&pswEdt.getText().toString().equals(UserBean.user.getPassword())){
-                    Toast.makeText(LoginActivity.this,"LOGIN", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(LoginActivity.this,ListActivity.class);
+                if (!userEdt.getText().toString().equals("") && !pswEdt.getText().toString().equals("")
+                        && userEdt.getText().toString().equals(UserBean.user.getUserName())
+                        && pswEdt.getText().toString().equals(UserBean.user.getPassword())) {
+                    Toast.makeText(LoginActivity.this, "LOGIN", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(LoginActivity.this, ListActivity.class);
                     startActivity(intent);
-                }else {
-                    Toast.makeText(LoginActivity.this,"something is not true", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(LoginActivity.this, "something is not true", Toast.LENGTH_LONG).show();
                 }
             }
         });
